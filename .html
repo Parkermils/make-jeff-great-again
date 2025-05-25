@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Jeff Great Again</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0077be, #00c6ff);
+      color: #fff;
+    }
+    header, footer {
+      background-color: rgba(0, 51, 102, 0.9);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .comment-box textarea {
+      width: 100%;
+      height: 80px;
+      border-radius: 5px;
+      padding: 0.5rem;
+      border: none;
+    }
+    .comment-box button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #005577;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .comments {
+      margin-top: 1rem;
+    }
+    .comment {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Make Jeff Great Again</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Jeff</a>
+      <a href="#nerf">The Nerf Files</a>
+      <a href="#comments">Community Comments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Welcome to the movement to Make Jeff Great Again. Join us as we dive deep into the injustice that was the Jeff nerf.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Jeff</h2>
+      <p>Jeff was once powerful, noble, and respected. Then... the nerf came. This page tells his story.</p>
+    </section>
+
+    <section id="nerf">
+      <h2>The Nerf Files</h2>
+      <p>Here you'll find a comprehensive breakdown of the changes and why they make absolutely no sense.</p>
+    </section>
+
+    <section id="comments">
+      <h2>Community Comments</h2>
+      <div class="comment-box">
+        <textarea id="commentInput" placeholder="Share your thoughts..."></textarea>
+        <button onclick="addComment()">Post Comment</button>
+      </div>
+      <div class="comments" id="commentList"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Want to reach out? Email us at <a href="mailto:jeff@makejeffgreatagain.com" style="color: #fff; text-decoration: underline;">jeff@makejeffgreatagain.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Make Jeff Great Again. Powered by the tides of truth.</p>
+  </footer>
+
+  <script>
+    function addComment() {
+      const commentInput = document.getElementById('commentInput');
+      const commentList = document.getElementById('commentList');
+
+      if (commentInput.value.trim() !== '') {
+        const comment = document.createElement('div');
+        comment.className = 'comment';
+        comment.textContent = commentInput.value;
+        commentList.prepend(comment);
+        commentInput.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
